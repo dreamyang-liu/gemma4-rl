@@ -1,0 +1,23 @@
+# Data, models, checkpoints and run outputs (hundreds of GB). ../README.md describes how to rebuild them.
+/runs/
+/models/
+/ckpt/
+/data/
+/teacher/
+/wheelhouse/
+/trajectories/
+/submissions/
+/rebench_rl_train_portable_v3.jsonl
+# ext/: SFT data, 744 repo snapshots (44 GB) and the task-filter working files; only the final task list,
+# its image manifest and the filter notes are tracked
+/ext/*
+!/ext/rebench_filter/
+/ext/rebench_filter/*
+!/ext/rebench_filter/README.md
+!/ext/rebench_filter/rubric.md
+!/ext/rebench_filter/dev_reference.md
+!/ext/rebench_filter/rebench_tasks_usable.jsonl
+!/ext/rebench_filter/rebench_usable_sources.jsonl
+# Python
+__pycache__/
+*.pyc

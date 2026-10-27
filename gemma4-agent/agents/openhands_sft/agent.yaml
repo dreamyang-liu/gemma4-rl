@@ -1,0 +1,10 @@
+# Reproduces the setup of mliu444/coderforge-swegemma-skill-sft-v2: only the openhands skill + get_status/submit_patch.
+name: swe_agent
+model: gemma-4-31b-it-qat-w4a16-ct
+instruction: !include prompts/system.md
+tools:
+  - get_status
+  - submit_patch
+skills:
+  - skills/openhands
+generate_content_config: !include configs/sampling.yaml

@@ -1,0 +1,12 @@
+# Experiment outputs: checkpoints, rollout state, Ray and train logs (tens of GB)
+runs/
+# Raw TITO proxy and harness logs collected during development (~100 MB)
+dev_logs/
+# Large fixtures: parity / budget cases (~35 MB) and smoke-run replay data
+tests/*.jsonl
+data/replay_smoke1_*.json
+# Python
+__pycache__/
+*.pyc
+# Host venv for the agent server and tools (setup.sh venv)
+.venv/

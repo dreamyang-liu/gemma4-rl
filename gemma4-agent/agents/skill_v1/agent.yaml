@@ -1,0 +1,10 @@
+# Tools as skill scripts (swe-tools: run_command, read_file, write_file, str_replace) that log every call and add
+# progress / escalating budget warnings to their results; submit_patch stays native. 30 tool calls, 8 minutes.
+name: swe_agent
+model: gemma-4-31b-it-qat-w4a16-ct
+instruction: !include prompts/system.md
+tools:
+  - submit_patch
+skills:
+  - skills/swe-tools
+generate_content_config: !include configs/sampling.yaml

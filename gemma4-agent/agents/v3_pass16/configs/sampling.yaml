@@ -1,0 +1,8 @@
+# pass@k sampling: Gemma-recommended temperature 1.0 (v3 uses 0.2).
+temperature: 1.0
+top_p: 0.95
+top_k: 64
+max_output_tokens: 8192
+thinking_config:
+  thinking_budget: 2048
+  include_thoughts: true

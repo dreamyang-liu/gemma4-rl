@@ -1,0 +1,8 @@
+# Qwen3.8-Flash-Next sampling (as agents/teacher) with the v2 thinking budget.
+temperature: 1.0
+top_p: 0.95
+top_k: 20
+max_output_tokens: 8192
+thinking_config:
+  thinking_budget: 2048
+  include_thoughts: true

@@ -1,0 +1,5 @@
+# ~12h Kaggle budget / ~120 hidden tasks (sequential) => <= ~6 min per task incl. setup.
+evaluation:
+  timeout_seconds: 120
+  max_tool_calls: 40
+  max_time_minutes: 5

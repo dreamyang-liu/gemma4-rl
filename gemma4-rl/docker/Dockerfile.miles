@@ -1,0 +1,10 @@
+# gemma4-miles:g4rl — the Miles/Megatron/Megatron-Bridge fixes for LoRA GRPO on Gemma 4 baked into the image.
+# miles_patches.py is applied at build time instead of at every container start (run_experiment.sh skips it when the
+# marker /root/.g4rl_patched carries the same sha256 as the mounted miles_patches.py, and refuses to run on a mismatch).
+# Build (context = this directory, prepared by build_miles_image.sh): docker build -f Dockerfile.miles -t gemma4-miles:g4rl .
+FROM gemma4-miles:patched
+COPY miles_patches.py /root/g4rl-build/miles_patches.py
+COPY kernels /root/g4rl/kernels
+RUN python3 /root/g4rl-build/miles_patches.py \
+ && python3 -c "import hashlib;print(hashlib.sha256(open('/root/g4rl-build/miles_patches.py','rb').read()).hexdigest())" > /root/.g4rl_patched \
+ && cat /root/.g4rl_patched

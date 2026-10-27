@@ -1,0 +1,8 @@
+# Only the two project trees and the files at this level are tracked. Everything else under ~/project
+# (other repos, model weights, docker data, ...) is ignored. Each tree has its own .gitignore.
+/*
+!/.gitignore
+!/README.md
+!/setup.sh
+!/gemma4-rl/
+!/gemma4-agent/

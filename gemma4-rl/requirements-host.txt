@@ -1,0 +1,5 @@
+# Host-side Python for gemma4-rl (agent_server.py, tools/, the `hf` CLI). ../setup.sh venv installs it into gemma4-rl/.venv.
+# Known-good: fastapi 0.156.4, uvicorn 0.54.0, huggingface_hub 1.33.0 on Python 3.12.
+fastapi>=0.115
+uvicorn>=0.30
+huggingface_hub>=1.0
